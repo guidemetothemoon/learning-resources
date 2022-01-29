@@ -112,6 +112,9 @@ Assigned permissions that shouldn't be assigned in the first place
 ### Security templates
 Standardization of security settings
 
+### Server affinity (Load Balancer)
+Ability of Load Balancer or router to send a user's request to the same server where their session was initiated
+
 ### Shunning
 Ignore attack (f.ex., when it is not relevant/applicable)
 
