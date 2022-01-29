@@ -3,7 +3,7 @@
 ### Ad-Hoc Mode
 Devices connect in a mesh network as group of peers
 
-### Advanced Persisten Threat (APT)
+### Advanced Persistent Threat (APT)
 Sophisticated attacks over a long period of time, often sponsored by state governments
 
 ### ARP Poisoning - example
