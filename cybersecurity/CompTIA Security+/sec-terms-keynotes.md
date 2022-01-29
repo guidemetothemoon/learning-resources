@@ -77,5 +77,5 @@ Prevents server from attacker updating the certificate
 ### Certificate stapling
 Used by web server to provide certificate validity
 
-## Root Certificate Authority (CA) name and public key
+### Root Certificate Authority (CA) name and public key
 Only included in root certificate, not in end-user certificate 
