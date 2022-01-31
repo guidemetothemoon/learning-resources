@@ -4,8 +4,14 @@
 
 ### 7 data wipes are recommended
 
+### 802.1x
+Is used to prevent rogue access point to be plugged into network by authenticating user and device.
+
 ### Active Directory Federation Services (AD FS)
 Software component for Windows that provides users with SSO access to systems & applications across organization boundaries or between partner organizations. Uses claims-based access control authorization model to maintain application security & implement federated identity. Is part of AD services.
+
+### Access Control List (ACL)
+- Used by router and firewall to block traffic by port, protocol or IP address.
 
 ### Ad-Hoc Mode
 Devices connect in a mesh network as group of peers.
@@ -35,6 +41,9 @@ Exploits probability of hash collision.
 Disadvantage - encryption speed & error propagation.
 Advantage - high diffusion & tampering immunity.
 
+### Blue screen of death
+Windows stop error, attributed to hardware problems.
+
 ### Bridge
 - Segments networks into collision domains. Has less ports than switches (1 port == 1 collision domain).
 - Optimize network usage by remembering which network segments MAC addresses are connected to.
@@ -44,6 +53,12 @@ Prevents server from attacker updating the certificate.
 
 ### Certificate stapling
 Used by web server to provide certificate validity.
+
+### Certificate trust errors
+Check if certificate is valid and is added to trusted root CA store on the local machine. Deleting local cache will remove certificate from trusted root CAs.
+
+### CPU Throttling
+Used to slow down processing -> reduces power consumption and heat.
 
 ### Data labeling
 - Data owners decide how the data is labeled (top secret, public, etc.).
@@ -72,6 +87,22 @@ Uses UDP port 53.
 ### Domain Name System Security Extensions (DNSSEC)
 Uses digital signature based on public key cryptography: DNS data signed by owner of DNS zone with private key -> public key published for anyone to use -> when recursive resolver looks up data it uses public key to validate authenticity of DNS data (to prevent DNS response spoofing) -> results in data origin authentication & integrity.
 
+### Download of unauthorized software
+Reduces available bandwidth & amount of free disk space.
+
+### Download third-party mobile application
+- iOS: jailbreaking + sideloading
+- Android: rooting (equivalent of jailbreaking for Android) + sideloading
+
+### Due care
+Taking steps to address a security problem like ensuring client data is confidential.
+
+### Due diligence
+Act of understanding security risks.
+
+### Due process
+Actions taken as a result of due care policy violation.
+
 ### Dynamic ARP inspection
 Validates ARP packets in a network - discards those with invalid MAC to IP binding. Used against ARP poisoning (Man-in-the-Middle (MiTM) attack variation where MAC addresses are spoofed).
 
@@ -99,6 +130,9 @@ Near-real disaster incident, is expensive to execute.
 
 ### Functional excercise
 Simulate disaster incident at more realistic level.
+
+### Gray hat hacker
+Discovers security flaws & makes these public - not for personal gain.
 
 ### Hardware Security Module (HSM)
 Cryptographic processor that is used for securing cryptographic keys and provisioning encryption, decryption, authentication and digital signing services. Used in PKI, database encryption, SSL/TLS for web servers. Can generate and protect keys.
@@ -131,6 +165,12 @@ Used in setting up security associations in IPsec.
 - Authentication Header (AH) - provides authentication & integrity check, added to packet header (MD5, SHA-1, SHA-2).
 - Encapsulating Security Payload (ESP) - provides encryption services, adds header + trailer + integrity check value (MD5, SHA-1, SHA-2, 3DES, AES).
 
+### IoT devices
+- Unable to update embedded firmware.
+
+### Integrity checker (MS System File Checker)
+Can determine if dll-s were tampered with.
+
 ### IP Spoofing defense
 Packet filtering, encryption, key-based authentication.
 
@@ -160,6 +200,9 @@ Provides message integrity, will reveal any data tampering.
 ### MANET
 Mobile ad-hoc network used for on-the-fly communication - every devices acts as a router.
 
+### Mobile download manager
+States how many connections are allowed and bandwidt amount that they're allowed to use.
+
 ### Mobile security
 Least functionality on mobile - disable what's not in use.
 
@@ -168,6 +211,9 @@ Maximum distance - 10 meters, two-way communication.
 
 ### NetBIOS (Network Basic Input / Output System)
 Not routable network protocol, goes over TCP/IP (NBT). Microsoft protocol used long ago for file and print sharing, uses TCP port 139.
+
+### Network Access Control (NAC)
+Checks if device is fully patched (no viruses) before allowing it into the network.
 
 ### Network Based Intrusion Detection/Protection System (NIDS/NIPS)
 - Passive monitoring -> examine traffic copy.
@@ -212,6 +258,9 @@ Validates plans identified after table-top exercise, in an environment that simu
 
 ### Port forwarding
 Technique that is often used in terms of Network Address Translation (NAT) - it redirects communication request from one address & port number combination to another while packets are traversing network gateway.
+
+### Port security
+Prevents from someone plugging laptop into network.
 
 ### Private cloud
 Self-service & virtualization.
@@ -261,8 +310,9 @@ Ignore attack (f.ex., when it is not relevant/applicable).
 ### Sideloading
 Transfers data between two devices. Is associated with installing applications to Android from other places than Google Play (f.ex., USB).
 
-### SIEM correlation
-Helps compare events from different logs to link them together.
+### SIEM
+- SIEM correlation - Helps compare events from different logs to link them together.
+- Monitors wrong attacks (false positives) -> reason for that may be wrong input filters.
 
 ### Simple Service Discovery Protocol (SSDP)
 Self-managing network service discovery standard.
@@ -310,6 +360,12 @@ Applies through mobile device management (MDM), helps to impose different access
 ### TCP Offload (Load Balancer)
 Reduces overhead with opening/closing TCP sockets, reduces total number of connections needed without impacting application's capacity.
 
+### Tethering
+When laptop get internet connection from the phone.
+
+### To discover disable SSID (Service Set Identifier)
+Use wireless packet sniffer or perform SSID de-cloak.
+
 ### Transport mode
 Internal, doesnt encrypt header -> between servers.
 
@@ -327,6 +383,9 @@ Use of portable devices as USB.
 
 ### Virtual IP Load Balancing
 Doesn't take load of each interface into account & assumes that all loads are similar.
+
+### VM Shielding
+Security mechanism used to prevent hypervisor administrators from accessing VM content while having the ability to manage the VM itself.
 
 ### Voice over Internet Protocol (VOIP) protocols (RTP, SIP)
 - RTP (Real-time Transport Protocol): protocol for transmitting VOIP.
@@ -350,6 +409,9 @@ Resolves NetBIOS computer names to IP addresses.
 ### Wireless Access Point (WAP)
 - Fat: has all needed functionality, ability to traffic between wired interfaces like L2/L3 vswitch & MAC filtering -> no other servers or devices are required.
 - Thin: requires some server or device to offload some functionality to.
+
+### Wireless Packet Sniffer
+Used to diagnose wireless access point (AP) problems.
 
 ### WPA (Wi-Fi Protected Access)
 - Uses TKIP (Temporal Key Integrity Protocol).
