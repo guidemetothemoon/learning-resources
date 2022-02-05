@@ -31,8 +31,11 @@ An email was sent but was never received by the intended recipient.
 ### Authentication
 Validates credentials after those are provided.
 
-### Basel III
-Framework for banking industry security.
+### Backout
+Reversion from change that had negative consequences.
+
+### Banner grabbing
+- telnet, netcat & nmap can be used for banner grabbing.
 
 ### Birthday attack
 Exploits probability of hash collision.
@@ -60,8 +63,18 @@ Check if certificate is valid and is added to trusted root CA store on the local
 ### CPU Throttling
 Used to slow down processing -> reduces power consumption and heat.
 
+### CSIRT (Computer Security Incident Response Team)
+Formalized or ad-hoc team you can call upon to respond to an incident after it arises.
+
+### DAMP (Database activity monitoring and prevention)
+- Monitors, alerts & prohibits unauthorized access to the database.
+- Addresses regulatory compliance.
+- Is independent of native db logging and audit.
+- Can be used as a compensating control.
+
 ### Data labeling
 - Data owners decide how the data is labeled (top secret, public, etc.).
+- Generic data labels: High, Medium and Low. They represent the risk of data being exposed outside of the organization.
 
 ### DDoS mitigation
 - Perimeter devices.
@@ -72,17 +85,22 @@ Used to slow down processing -> reduces power consumption and heat.
 ### Deprovision an app
 First, remove access -> then backup data.
 
+### Desensitizing
+When radiofrequency becomes too high, it can cause receivers in wireless units to become deaf.
+
+### DHCP Snooping
+Prevents unauthorized rogue DHCP servers from operating on the company's network.
+
 ### DIAMETER
 - Uses TCP, doesn't encrypt the message.
 
 ### Digital signature
 Created with sender's private key and is verified with sender's public key.
 
-### DNS server replication traffic
-Uses TCP port 53.
-
-### DNS user queries
-Uses UDP port 53.
+### DNS 
+- DNS server replication traffic - uses TCP port 53.
+- DNS user queries - uses UDP port 53.
+- DNS round robin - is used to ensure incoming web requests are dealt with in timely manner.
 
 ### Domain Name System Security Extensions (DNSSEC)
 Uses digital signature based on public key cryptography: DNS data signed by owner of DNS zone with private key -> public key published for anyone to use -> when recursive resolver looks up data it uses public key to validate authenticity of DNS data (to prevent DNS response spoofing) -> results in data origin authentication & integrity.
@@ -115,12 +133,11 @@ Federal risk & authorization management program, non-regulatory framework for pr
 - SCP: secure copy, uses SSH to secure transfer.
 
 
-### Firewall
+### Firewall (FW)
 - Often acts as VPN concentrator.
 - Can be stateful, stateless, network-based, host-based, application-aware (next generation firewall).
-
-### FISMA
-Framework for protection of government data & assets against disastrous threats.
+- Stateful FW can be used to prevent SYN flood.
+- Is used against DDoS.
 
 ### Flow logs
 Track outbound data from network interfaces of the server.
@@ -136,6 +153,10 @@ Discovers security flaws & makes these public - not for personal gain.
 
 ### Hardware Security Module (HSM)
 Cryptographic processor that is used for securing cryptographic keys and provisioning encryption, decryption, authentication and digital signing services. Used in PKI, database encryption, SSL/TLS for web servers. Can generate and protect keys.
+
+### HDD (Hard Drive)
+- HDD shredding - Mechanical device that physically destroys old HDDs so that the data they contain can't be recovered.
+- HDD formatting - wipes File Allocaiton Table (FAT), file data blocks are left intact on disk.
 
 ### Host Based Intrusion Detection/Protection System (HIDS/HIPS)
 - Provides IP addresses and ports of both sender & receiver and protocol.
@@ -174,6 +195,9 @@ Can determine if dll-s were tampered with.
 ### IP Spoofing defense
 Packet filtering, encryption, key-based authentication.
 
+### IT service performance
+- Is improved through implementation of ITIL.
+
 ### Kerberos
 Protected against replay & eavesdropping, builds on symmetric key cryptography and requires trusted third-party. Uses UDP port 88.
 
@@ -188,8 +212,14 @@ Protocol to communicate with directory services (like Active Directory (AD)). Ha
 - Simple authentication: anonymous/unauthenticated (logging only) or with password (insecure).
 - Simple authentication and security (SASL): binds LDAP to authentication mechanism (like Kerberos). Uses TLS to keep username & password safe from network sniffers and alike.
 
+### Low power directional antenna
+Is used to prevent attacks from external threat actor.
+
 ### MAC (Message Authentication Code)
 Provides message integrity, will reveal any data tampering.
+
+### Mail gateway
+Can be set as a spam filter.
 
 ### Mail protocols (IMAP, SMTP, PGP, S/MIME)
 - IMAP (Internet Message Access Protocol) - used for receiving e-mails.
@@ -206,11 +236,17 @@ States how many connections are allowed and bandwidt amount that they're allowed
 ### Mobile security
 Least functionality on mobile - disable what's not in use.
 
+### Multi-layered application of mechanisms
+Intended to prevent vulnerabilities from being easily exploitable.
+
 ### Near-field communication (NFC)
 Maximum distance - 10 meters, two-way communication.
 
 ### NetBIOS (Network Basic Input / Output System)
 Not routable network protocol, goes over TCP/IP (NBT). Microsoft protocol used long ago for file and print sharing, uses TCP port 139.
+
+### netstat (Windows) and netcat (Linux)
+- Can identify an established session.
 
 ### Network Access Control (NAC)
 Checks if device is fully patched (no viruses) before allowing it into the network.
@@ -223,12 +259,28 @@ Checks if device is fully patched (no viruses) before allowing it into the netwo
 - Available system types: signature-based, anomaly-based, behaviour-based, heuristic-based.
 - NIDS should be put in front of and behind firewall.
 - Provides IP addresses and ports of both sender & receiver and protocol.
+- NIDS & nmap can identify new hosts on the network.
+- Anomaly-based NIDS/NIPS start with a database of known anomalies and can identify new variants.
 
-### NTLM (Windows NT LAN Manager)
-negotiate_msg from client -> challenge_msg from server -> authenticate_msg from client. 128 bits password hashes - two of them (DES or MD4). Used mainly for compatibility with older systems.
+### NNTP (Network News Transfer Protocol)
+- Used for transporting Usenet news articles between news servers and for reading and posting articles by end user client applications.
+- Uses TCP port 119 for NNTP and port 563 for NNTPS.
+- Uses TCP port 433 for NNSP - bulk transfer of articles between servers.
+
+### Non-regulatory frameworks
+- CISQ: consortium for IT software quality.
+- COBIT: control objectives for information and related technologies, framework for risk reduction in financial organizations.
+- FedRAMP: government agencies evaluation of cloud solution risks.
+- NIST
+- Privacy Shield: data transfer security between EU & USA.
+- ISACA
+- ITIL
 
 ### Non-repudiation
 Presents the denial from someone/something of having sent a transmission or making a change to data.
+
+### NTLM (Windows NT LAN Manager)
+negotiate_msg from client -> challenge_msg from server -> authenticate_msg from client. 128 bits password hashes - two of them (DES or MD4). Used mainly for compatibility with older systems.
 
 ### OAuth
 Provides access delegation, token-based. Is more an authorization protocol.
@@ -251,6 +303,11 @@ Validates plans identified after table-top exercise, in an environment that simu
 - L6: Presentation layer, formats data to be sent across network.
 - L7: Application layer, closest to the user, interact directly with software application.
 
+### Over-the-air (OTA) updates
+- Used for phones & IoT devices, must have full battery or be connected to a power source.
+- Can push illegal updates/apps if original equipment manufacturers don't secure the device properly.
+- Protection: encrypt & authenticate OTA updates & use secure protocol for delivery of updates.
+
 
 ### PKI (Public Key Infrastructure)
 - User 1 encrypts with public key of user 2 -> user 2 decrypts with private key of user 2.
@@ -260,10 +317,17 @@ Validates plans identified after table-top exercise, in an environment that simu
 Technique that is often used in terms of Network Address Translation (NAT) - it redirects communication request from one address & port number combination to another while packets are traversing network gateway.
 
 ### Port security
-Prevents from someone plugging laptop into network.
+- Prevents from someone plugging laptop into network.
+- Disables ports & reduces switch functionality.
 
 ### Private cloud
 Self-service & virtualization.
+
+### Proxy server
+- Includes 3 components:
+  - proxy filter: URL filter to block access to certain websites.
+  - content filter: stops access to gaming websites.
+  - webpage caching: faster & more secure access to webpages.
 
 ### Radio Frequency Identification (RFID)
 Maximum distance - 3 meters, one-way communication. Uses encoded memory chip - RFID reader.
@@ -274,11 +338,24 @@ Maximum distance - 3 meters, one-way communication. Uses encoded memory chip - R
 ### RAID
 Implemented for performance & data redundancy.
 
+### Regulatory frameworks
+- PCI DSS - for payment cards.
+- Sarbanes-Oxley (SOX) - mandatory controls for public companies.
+- HIPAA - health information protection.
+- ISO
+- GDPR
+- BASEL III - framework for banking industry security (voluntarily framework).
+- FISMA - government-wide program for security against disastrous threats. Builds on FIPS (framework for computer systems security, versions 140, 199 and 200).
+- NERC - used for electrical systems.
+
 ### Reverse brute-force - mitigation
 Establish password policy that disallows common passwords.
 
 ### Reverse engineering
 Man-made object is de-constructed to reveal it's designs, architecture, code, etc.
+
+### Reverse proxy
+Authenticates incoming connections and decrypts incoming traffic for inline NIPS to monitor.
 
 ### Robocalling
 Places unsolicited telemarketing calls.
@@ -363,6 +440,9 @@ Reduces overhead with opening/closing TCP sockets, reduces total number of conne
 ### Tethering
 When laptop get internet connection from the phone.
 
+### Time-based one time password (TOTP)
+- Password age systen with TOTP locks our a user that attempt to log in once to 3 separate hosts.
+
 ### To discover disable SSID (Service Set Identifier)
 Use wireless packet sniffer or perform SSID de-cloak.
 
@@ -376,7 +456,8 @@ Allows file storage without requiring username & password.
 If data leaves the network -> over the Internet.
 
 ### Unified Threat Management (UTM)
-Single device that combines security devices like anti-virus, HIDS (Host-based Intrusion Detection System), log monitoring, firewall, etc.
+- Single device that combines security devices like anti-virus, HIDS (Host-based Intrusion Detection System), log monitoring, firewall, etc.
+- Firstly is a firewall but also carries out functions of URL & content inspection in addtion to malware filtering.
 
 ### USB OTG (On-The-Go)
 Use of portable devices as USB.
@@ -390,6 +471,9 @@ Security mechanism used to prevent hypervisor administrators from accessing VM c
 ### Voice over Internet Protocol (VOIP) protocols (RTP, SIP)
 - RTP (Real-time Transport Protocol): protocol for transmitting VOIP.
 - SIP (Session Initiation Protocol): protocol to initiate a VOIP call.
+
+### VPN
+- Site-to-site VPN can be used by companies instead of lease lines - must be set to always-on.
 
 ### War dialing
 Dialing numbers hoping a computer modem answers.
