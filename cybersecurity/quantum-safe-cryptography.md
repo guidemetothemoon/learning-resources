@@ -1,9 +1,16 @@
-### 2022 Summary of current situation on quantum-safe cryptography
+# Quantum-Safe Cryptography
 
-With acceleration of development of quantum computers it has become clear that current cryptographic techniques and cryptographic algorithms will face great challenges once quantum computers become publicly available. Current data protection mechanisms heavily rely on a collection of well-proven and well-known cryptographic algorithms which in return heavily rely on implementations that can't be broken with computing power that is currently available. With advancement and public availability of quantum computers such implementations will become pretty easy and straightforward to solve. 
-What makes it even scarier is the fact that you can steal data that's encrypted now and keep it stored until a quantum computer with enough computing power becomes available. Once it's available all previously encrypted data can be decrypted. 
+With acceleration of development of quantum computers it has become clear that current cryptographic techniques and cryptographic algorithms will face great challenges once quantum computers become publicly available. Current data protection mechanisms heavily rely on a collection of well-proven and well-known cryptographic algorithms. These cryptographic algorithms were built so that they can't be broken with computing power that is currently available. With advancement and public availability of quantum computers such implementations will become pretty easy and straightforward to solve which makes establishment and standardization of quantum-safe cryptography critically important.
 
-### Recommended Resources
+What makes the whole situation even scarier is the fact that a malicious actor can steal data that's safely encrypted now and keep it stored until a quantum computer with enough computing power becomes available. Once it's available, all encrypted data can potentially be easily decrypted. This means that **all data that has ever been in-transit or at-rest will become vulnerable to disclosure**.
+
+Not all cryptographic algorithms are currently confirmed to be vulnerable to quantum attacks but this may change with time and more research. Symmetric encryption algorithms like AES can still be quantum-safe by increasing the key size. Most of the asymmetric encryption algorithms are not quantum-safe due to the fact that they're based upon Integer Factoring and Discrete Logarithms complexities which can be resolved with quantum computing.
+
+It has also become clear that many security protocols are lacking cryptographic agility which means that it makes it extremely hard to extend and improve them in order to make them quantum-safe.
+
+These are some of the factors that make quantum-safe cryptography a complex task to complete.
+
+## Recommended Resources
 
 😼 [ETSI Whitepaper: Quantum Safe Cryptography and Security - An introduction, benefits, enablers and challenges](https://www.etsi.org/images/files/ETSIWhitePapers/QuantumSafeWhitepaper.pdf)
 
