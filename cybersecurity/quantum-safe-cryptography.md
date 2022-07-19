@@ -12,6 +12,20 @@ These are some of the factors that make quantum-safe cryptography a complex task
 
 Back in 2016 NIST has started a process for discovering and creating post-quantum cryptography standards and in 2020 they announced Round 3 finalists which is a list of 7 most promising general-purpose algorithms for public-key encryption/KEM and digital signature schemes. A list of 8 alternate algorithms has also been announced which may potentially be standardized by NIST as well, just not as part of Round 3. Current status is that NIST plans to publish standardization documents in **2024** but this may be subject to change depending on further development in quantum computing domain.
 
+___
+
+**Update as of 5th July, 2022:** NIST has officially announced the first four encryption algorithms - 1 for general encryption and 3 for digital signatures - that will become part of NIST\'s post-quantum cryptographic standard:
+1. [CRYSTALS-Kyber](https://pq-crystals.org/kyber/index.shtml) - general encryption algorithm, uses small encryption keys and has relatively high speed of operation.
+2. [CRYSTALS-Dilithium](https://pq-crystals.org/dilithium/index.shtml) - digital signature algorithm, highly efficient, recommended to be used as primary algorithm.
+3. [FALCON](https://falcon-sign.info/) - digital signature algorithm, highly efficient, recommended to be used for applications that require smaller signatures.
+4. [SPHINCS+](https://sphincs.org/) - digital signature algorithm, larger and slower than CRYSTALS-Dilithium and FALCON, recommended for backup due to it\'s usage of a different math approach than the rest of the chosen algorithms.
+
+Four additional algorithms are still under consideration and are the ones that are designed for general encryption. Please be aware that, as of now, NIST doesn\'t recommend to integrate the chosen algorithms into your products as they may be subject to change until the standard is finalized. But NIST encourages everyone to start exploring the algorithms already now and inventoring affected systems for future cryptographical changes.
+
+NIST has also announced first 12 partners that will help with The National Cybersecurity Center of Excellence (NCCoE) Migration to Post-Quantum Cryptography project, Microsoft being one of them.
+
+___
+
 If you're interested in open-source projects that contribute to building quantum-resistant cryptography you can check out **The Open Quantum Safe (OQS) Project** - it's an open-source project that is also supported by companies like Microsoft, Amazon and IBM. Another cool thing that Microsoft did was that as part of the **Project Natick** experiment (underwater datacenter in the North Sea, off the Scottish coast) they built an encrypted network tunnel between the underwater datacenter and Microsoft Research Headquarters in Redmond, Washington, USA. This tunnel was protected with quantum-safe cryptography using a post-quantum cryptography-enabled Virtual Private Network (VPN) application based on OpenVPN. The experiment was quite successful which also contributes to a promissing near future of post-quantum cryptography.
 
 **Lastly, what are the current recommendations for preparing and migrating to quantum-safe standards?**
@@ -28,6 +42,10 @@ Stage 1 is an activity that anyone can start working on already now. Getting an 
 More details on everything summarized here can be found in the recommended resources section below - reach out if you want to have a chat about quantum-safe cryptography!😸
 
 ## Recommended Resources
+
+😼 [NIST Announces First Four Quantum-Resistant Cryptographic Algorithms](https://www.nist.gov/news-events/news/2022/07/nist-announces-first-four-quantum-resistant-cryptographic-algorithms)
+
+😼 [NIST Announces Collaborating Vendors in the Migration to Post-Quantum Cryptography Project](https://quantumcomputingreport.com/nist-announces-collaborating-vendors-in-the-migration-to-post-quantum-cryptography-project/)
 
 😼 [ETSI Whitepaper: Quantum Safe Cryptography and Security - An introduction, benefits, enablers and challenges](https://www.etsi.org/images/files/ETSIWhitePapers/QuantumSafeWhitepaper.pdf)
 
