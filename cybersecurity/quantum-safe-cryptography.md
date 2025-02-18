@@ -8,13 +8,14 @@ Not all cryptographic algorithms are currently confirmed to be vulnerable to qua
 
 It has also become clear that many security protocols are lacking **cryptographic agility** which means that it makes it extremely hard to extend and improve them in order to make them quantum-safe.
 
-These are some of the factors that make quantum-safe cryptography a complex task to complete. All the existing security protocols and encryption algorithms have been tested, researched and standardized for years. Historically, **it has taken almost two decades to deploy our modern public key cryptography infrastructure** so you can imagine that creating a new standard for quantum-safe cryptography under current time constraints and the level of urgency is far from an easy task. 
+These are some of the factors that make quantum-safe cryptography a complex task to complete. All the existing security protocols and encryption algorithms have been tested, researched and standardized for years. Historically, **it has taken almost two decades to deploy our modern public key cryptography infrastructure** so you can imagine that creating a new standard for quantum-safe cryptography under current time constraints and the level of urgency is far from an easy task.
 
 Back in 2016 NIST has started a process for discovering and creating post-quantum cryptography standards and in 2020 they announced Round 3 finalists which is a list of 7 most promising general-purpose algorithms for public-key encryption/KEM and digital signature schemes. A list of 8 alternate algorithms has also been announced which may potentially be standardized by NIST as well, just not as part of Round 3. Current status is that NIST plans to publish standardization documents in **2024** but this may be subject to change depending on further development in quantum computing domain.
 
 ___
 
 **Update as of 5th July, 2022:** NIST has officially announced the first four encryption algorithms - 1 for general encryption and 3 for digital signatures - that will become part of NIST\'s post-quantum cryptographic standard:
+
 1. [CRYSTALS-Kyber](https://pq-crystals.org/kyber/index.shtml) - general encryption algorithm, uses small encryption keys and has relatively high speed of operation.
 2. [CRYSTALS-Dilithium](https://pq-crystals.org/dilithium/index.shtml) - digital signature algorithm, highly efficient, recommended to be used as primary algorithm.
 3. [FALCON](https://falcon-sign.info/) - digital signature algorithm, highly efficient, recommended to be used for applications that require smaller signatures.
@@ -23,7 +24,6 @@ ___
 Four additional algorithms are still under consideration and are the ones that are designed for general encryption. Please be aware that, as of now, NIST doesn\'t recommend to integrate the chosen algorithms into your products as they may be subject to change until the standard is finalized. But NIST encourages everyone to start exploring the algorithms already now and inventoring affected systems for future cryptographical changes.
 
 NIST has also announced first 12 partners that will help with The National Cybersecurity Center of Excellence (NCCoE) Migration to Post-Quantum Cryptography project, Microsoft being one of them.
-
 ___
 
 If you're interested in open-source projects that contribute to building quantum-resistant cryptography you can check out **The Open Quantum Safe (OQS) Project** - it's an open-source project that is also supported by companies like Microsoft, Amazon and IBM. Another cool thing that Microsoft did was that as part of the **Project Natick** experiment (underwater datacenter in the North Sea, off the Scottish coast) they built an encrypted network tunnel between the underwater datacenter and Microsoft Research Headquarters in Redmond, Washington, USA. This tunnel was protected with quantum-safe cryptography using a post-quantum cryptography-enabled Virtual Private Network (VPN) application based on OpenVPN. The experiment was quite successful which also contributes to a promissing near future of post-quantum cryptography.
@@ -35,7 +35,6 @@ ETSI (European Telecommunications Standards Institute) has created a framework t
 1. **Inventory compilation** - in order to understand the impact and get an overall picture of how much you will need to migrate, you need to identify the set of cryptographic assets and processes in the system, including hardware and software. This stage also includes identification of impacted supply chain resources.
 2. **Preparation of the migration plan** - once the affected assets have been identified you can start with creating a plan for migration, including the cost and timeline. Detailed planning is dependent upon knowledge of the inventory of cryptographic assets and their dependencies across the system supply chain, therefore Stage 1 is a pre-requisite for the migration plan preparation stage. Dependency testing must be an important part of the migration plan preparation.
 3. **Migration execution** - this stage includes migration management with tasks like tracking the progress and the migration budget; another part of the migration execution stage is mitigation management where the plan must be in place for how to handle issues that may occur during migration and how these issues may affect the overall budget and timing constraints.
-
 
 Stage 1 is an activity that anyone can start working on already now. Getting an overall picture of the assets that an organization has, including supply chain, will not only be valuable for planning for migration to quantum-safe state but it will also be useful for threat modeling and strengthening security of the organization and the ecosystem it owns and maintains.
 

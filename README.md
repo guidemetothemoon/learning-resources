@@ -1,2 +1,5 @@
-# Learning Resources
-This repository contains learning material and recommendations both related to certifications I've acquired myself or reosurces that have proved being useful in my tech journey.
+# Certification Resources
+
+This repository contains preparation material and additional learning resources and recommendations that I have used, referenced and/or created myself when preparing for the different exams.
+
+More information will be added here soon.
